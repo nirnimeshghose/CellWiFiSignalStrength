@@ -58,33 +58,30 @@ public class MainActivity extends AppCompatActivity {
     boolean isWifi;
     int userFreq;
     private Handler mHandler = new Handler();
-
-    WifiManager wifiManager;
-    WifiInfo connection;
-    String display;
-    String FILE_NAME_WIFI = "mywifi";
-    String FILE_NAME_CELL = "mycell";
-
     private TelephonyManager telephonyManager;
     private final static String LTE_TAG = "LTE_Tag";
-
-    String cellId;
-    String signalText;
-    String strCurrentSpeed;
-    double locationLatitude;
-    double locationLongitude;
-    FileOutputStream outputStream = null;
-
-    double speed = 0;
-    private FusedLocationProviderClient mFusedLocationClient;
-
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
     private Location lastLocation;
-
     private boolean isContinue = true;
     private boolean isGPS = true;
+    private FusedLocationProviderClient mFusedLocationClient;
 
+    WifiManager wifiManager;
+    WifiInfo connection;
+
+    FileOutputStream outputStream = null;
+
+    String display;
+    String FILE_NAME_WIFI = "mywifi";
+    String FILE_NAME_CELL = "mycell";
+    String cellId;
+    String signalText;
+    String strCurrentSpeed;
+
+    double locationLatitude;
+    double locationLongitude;
+    double speed = 0;
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
@@ -410,7 +407,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
 }
