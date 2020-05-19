@@ -217,11 +217,8 @@ public class MainActivity extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public void run() {
-            Toast.makeText(MainActivity.this, "This is a delayed toast", Toast.LENGTH_SHORT).show();
-
             wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             connection = wifiManager.getConnectionInfo();
-
 
             Calendar calendar = Calendar.getInstance();
             long timeNow = calendar.getTimeInMillis();
