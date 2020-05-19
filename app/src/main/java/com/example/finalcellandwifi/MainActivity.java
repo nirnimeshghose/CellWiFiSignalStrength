@@ -336,14 +336,15 @@ public class MainActivity extends AppCompatActivity {
                 if (location != null) {
                     locationLatitude = location.getLatitude();
                     locationLongitude = location.getLongitude();
-                    //Log.e(LTE_TAG,"point");
+                    Log.e(LTE_TAG,locationLatitude+" "+locationLongitude);
                     if (this.lastLocation != null&&location.distanceTo(this.lastLocation)!=0)
                         speed = (location.distanceTo(this.lastLocation)*1000) / (location.getTime() - this.lastLocation.getTime());
-                    //Log.e(LTE_TAG,"speed");
+                    Log.e(LTE_TAG,Double.toString(speed));
                     //if there is speed from location
                     if (location.hasSpeed()){
                         //get location speed
                         speed = location.getSpeed();
+                        Log.e(LTE_TAG,Double.toString(speed)+" from Location");
                     }
                     this.lastLocation = location;
 
