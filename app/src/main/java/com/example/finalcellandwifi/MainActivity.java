@@ -111,8 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
         locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(10); // 10 milliseconds
-        locationRequest.setFastestInterval(10); // 10 milliseconds
+        locationRequest.setInterval(0); // 10 milliseconds
+        locationRequest.setFastestInterval(0); // 10 milliseconds
+        locationRequest.setSmallestDisplacement(0); // 1 meter
 
         new GpsUtils(this).turnGPSOn(new GpsUtils.onGpsListener() {
             @Override
