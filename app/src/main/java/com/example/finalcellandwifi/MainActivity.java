@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-        mFusedLocationClient.requestLocationUpdates(locationRequest,locationCallback,Looper.myLooper());
+        mFusedLocationClient.requestLocationUpdates(locationRequest,locationCallback,Looper.getMainLooper());
     }
 
     public void startWifi(View v) {
